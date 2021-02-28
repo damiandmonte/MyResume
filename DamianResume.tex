@@ -1,276 +1,263 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+%-------------------------
+% Resume in Latex
+% Author : Damian D'monte
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
+\documentclass[letterpaper,10pt]{article}
 
-\documentclass[10pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
-% modern themes
-\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% character encoding
-\usepackage[utf8]{inputenc}
-\usepackage{fontawesome}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{ragged2e}
-% if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\input{glyphtounicode}
 
-% adjust the page margins
-\usepackage[scale=0.9]{geometry}
-\usepackage{multicol}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{15cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
-\usepackage{import}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-\usepackage{filecontents}
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
-% hanging publications: 1st line starts at beginning of line, 
-% further lines are placed a bit to the right
-%\usepackage{hanging}
-%\newcommand\publication[1]{%
-%  \smallskip\par\hangpara{1.3em}{1}\bibentry{#1}\smallskip
-%}
 
-% personal data
-\name{Damian Diago}{D'monte}
-% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{Fredericton, NB}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
-% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-%\email{damiandmonte@gmail.com}                               % optional, remove / comment the line if not wanted
-% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
-% \extrainfo{%
-% \href{https://github.com/damiandmonte}{github.com/damiandmonte}
-% }                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.9in}
 
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-  
-\newcommand*{\customcventry}[7][.25em]{
-  \begin{tabular}{@{}l} 
-    {\bfseries #4}
-  \end{tabular}
-  \hfill% move it to the right
-  \begin{tabular}{l@{}}
-     {\bfseries #5}
-  \end{tabular} \\
-  \begin{tabular}{@{}l} 
-    {\itshape #3}
-  \end{tabular}
-  \hfill% move it to the right
-  \begin{tabular}{l@{}}
-     {\itshape #2}
-  \end{tabular}
-  \ifx&#7&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#7%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
+\urlstyle{same}
 
-\newcommand*{\customcvproject}[4][.25em]{
-%   \vfill\noindent
-  \begin{tabular}{@{}l} 
-    {\bfseries #2}
-  \end{tabular}
-  \hfill% move it to the right
-  \begin{tabular}{l@{}}
-     {\itshape #3}
-  \end{tabular}
-  \ifx&#4&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#4%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-\setlength{\tabcolsep}{12pt}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
-\begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
-\makecvtitle
-\vspace*{-15mm}
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
-\begin{center}
-\begin{tabular}{ c c c c }
- \faGlobe\enspace linkedin.com/in/ddmonte & \faEnvelopeO\enspace damiandmonte@gmail.com & \faGithub\enspace damiandmonte &  \faMobile\enspace 506-897-2169\\  
-\end{tabular}
-\end{center}
-
-\section{EDUCATION}
-{\customcventry{September 2019 - May 2021}{Master of Computer Science}{University of New Brunswick}{Frederiction, NB}{}{}}
-{\customcventry{May 2013 - May 2016}{Bachelor of Engineering (Computer Engineering)   }{Fr. Concceicao Rodrigues College of Engineering, Univeristy of Mumbai}{Mumbai, Maharashtra}{}{}}
-%%{\customcventry{August 2010 - May 2013}{Diploma in Computer Technology}{Babasaheb Gawde Institute of Technology, MSBTE}{Mumbai, Maharashtra}{}{}}
-
-\section{KEY SKILLS}
-\cvline{Languages}{C/C++, Pro*C, Core Java, WebAssembly, Racket, Python, R, JavaScript, HTML/CSS, MySQL}
-\cvline{Technologies}{Docker, GitLab CI/CD, Git, SVN, CMake, GDB, Putty, VSCode, Eclipse, \LaTeX{}}
-
-\nocite{*}
-\bibliographystyle{plainurl}
-\renewcommand{\refname}{PUBLICATIONS \& PRESENTATIONS}
-%%\renewcommand{\bibliographyitemlabel}{\@Research Paper: {\arabic{enumiv}}}% 
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-%%\nocite{ben2018}
-
-\section{ACADEMIC PROJECTS}
-
-{\customcvproject{Forecasting of Nominal GDP using Economic Indicators}{Jan 2020 - April 2020}
-  {\begin{itemize}
-    \item Explored R language and its popular libraries like tidyverse and ggplot.  
-    \item Assembled a dataset of major economic indicators from multiple online sources. 
-    \item Performed exploratory data analysis on the dataset.
-    \item Performed modelling by exploring multiple models like linear regression, random forest, SVM. 
-  \end{itemize}
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
   }
 }
 
-{\customcvproject{Hybrid Model to Detect Malicious Executables (Bachelors Final Year Project) }{July 2016 – May 2016}
-{\begin{itemize}
-  \item Assembled a dataset of malicious and non-mailicous PE Executables and DLL libraries.
-  \item Extracted the binary data of PE-executables and applied a n-gram based approach to finalize a feature set. 
-  \item Modelled the dataset using SVM classification.
-  \item Developed a GUI using JApplets and JSwing to automate the training, testing and prediction process. 
-\end{itemize}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-%%{\customcvproject{Blood Donor Data-Web Portal}{Jan 2015 – May 2015}
-%%{\begin{itemize}
-%%  \item Idealized and created an online database that contains information about blood donors and their availibility.
-%%  \item Developed the front end using HTML, JavaScript, CSS, JSP.
-%%  \item Used Java Servlets, JDBC-ODBC bride drivers and Oracle 11g. 
-%%\end{itemize}
-%%}
+\newcommand{\resumeSubProjheading}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      {\small#5} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
 
-\section{EXPERIENCE}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-{\customcventry{Sept 2019 - Present}{Graduate Research Assistant}{IBM Center of Advance Studies --- Atlantic}{Fredericton, Canada}{}
-{\begin{itemize}
-  \item \textbf{Project:} Ahead-Of-Time Compilation in Eclipse OMR
-  \item \textbf{Technologies:} Unix, C/C++, GDB, CMake, VScode, Git, GitLab, CI/CD, Docker, Putty, Hyper-V.
-  \item Contributed to the Open Source Eclipse OMR code base.
-  \item Researched about shared cache and ELF-based compiled code storage options for Eclipse OMR AOT generated code.
-  \item Refactored the shared cache code.
-  \item Developed a ELF Shared Object generator for storing WebAssembly AOT generated code.
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Damian D'monte} \\ \vspace{4pt}
+    \small 506-897-2169 $|$ \href{mailto:x@x.com}{\underline{damiandmonte@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/ddmonte}} $|$
+    \href{https://github.com/...}{\underline{github.com/damiandmonte}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of New Brunswick}{Fredericton, NB}
+      {Master of Computer Science}{Sep. 2019 -- Aug 2021}
+    \resumeSubheading
+      {Fr. Concceicao Rodrigues College of Engineering, Univeristy of Mumbai}{Mumbai, MH}
+      {Bachelor of Engineering (Computer Engineering) }{May. 2013 -- May 2016}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubProjheading
+      {Graduate Research Assistant }{Sep 2019 -- Present}
+      {UNB/IBM Center of Advance Studies --- Atlantic $|$ Project --- \href{https://www-01.ibm.com/ibm/cas/canada/projects?projectId=1036}{\underline{OMR in Resource Constrained Env.}} }{Fredericton, NB}
+      {Technology hands-on --- C++, Gitlab CI/CD, VSCode, Docker, GDB, Linux}
+      \resumeItemListStart
+        \resumeItem{Researched into shared cache and ELF-based compiled code storage mechanisms for Eclipse OMR compiler technology}
+        \resumeItem{Co-authored and contributed shared cache code to the open source Eclipse OMR code base.}
+        \resumeItem{Developed a ELF-based shared object generator in C++ for storing WebAssembly Ahead-of-time compiled code.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubProjheading
+      {Software Developer}{Jan. 2017 -- Aug. 2019}
+      {Tata Consultancy Servies Limited $|$ Project --- TCS BaNCS Securites Trading - Front Office }{Mumbai, MH} 
+      {Technology hands-on --- Pro*C, C++, Putty, SVN, GDB, Linux, Bash Scripting, PL/SQL Dev., SCRUM}
+      \resumeItemListStart
+    %%  \resumeItem{\textbf{Project}: TCS BaNCS Securites Trading, \textbf{Team}: Order Routing System (ORS/OMS) - Front Office}
+      \resumeItem{Developed enhancements and resolved multiple defects/bugs impacting over a million customers for premier institutional and retail clients: \textbf{BNP Paribas, Investec, Nomura, HSBC, HDFC Securities \& Axis Securities}}
+      \resumeItem{Successfully deployed TCS BaNCS Securities Trading (FNO) on UAT/SIT/Production application server's at BNP Paribas, supported UAT/Fidessa testing, provided immediate fixes, and transitioned the product to LIVE}       
+      %%\resumeItem{Continuous liaison with client teams for understanding, replicating and resolving SIT, UAT and production issues}   
+      \resumeItem{Implemented bash scripts to automate application startup, sanity checks, logs backup, market open and close, etc.}
+      \resumeItem{Worked with cross-functional teams to ensure fulfillment of product requirements, evaluated product performance and transitioned patches from development to commercialization.}  
+      \resumeItem{Acted as a customer liaison on technical issues related to product integration and deployment}
+      \resumeItem{Provided production support (onsite/off-site) to institutional and retail trading desks during critical market hours.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Academic Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+          {\textbf{Mark \& Sweep Garbage Collector} $|$ \emph{C++, Git, Cmake}}{Aug 2019 -- Dec 2019}
+          \resumeItemListStart
+            \resumeItem{Implemented a heap management system to simulate object allocation via input trace files}
+            \resumeItem{Developed Mark and Sweep garbage collector prototype to perform mark/sweep operations on heap objects}
+            \resumeItem{Detected and deleted 99\% of dead objects and displayed CLI statistics post garbage collection}
+          \resumeItemListEnd  
+    \resumeProjectHeading
+          {\textbf{DaskDB Cost Based Optimizer} $|$ \emph{Python, Pandas, DaskDB}}{Jan 2020 -- Apr 2020}
+          \resumeItemListStart
+            \resumeItem{Researched into cost based optimzers and created a prototype for a DaskDB data science system}
+            \resumeItem{Developed a statsGather utility using Python and Pandas to gather different types of database statistics}
+            \resumeItem{Implemented the functionality to generate physical plans from a logical plan and calcuated the cost of each plan.}
+            %\resumeItem{Performed evaluation using the TPC-H benchmark.}
+          \resumeItemListEnd
+    %  \resumeProjectHeading
+     %     {\textbf{NominalGDP Predictor} $|$ \emph{R, ggplot, Tidyverse, Git}}{June 2020 -- Present}
+      %    \resumeItemListStart
+       %     \resumeItem{Assembled a dataset of major economic indicators from multiple online sources.}
+        %    \resumeItem{Performed exploratory data analysis on the dataset and trained it using linear regression and random forest model.}
+         %   \resumeItem{Predicted the Nominal GDP with 95\%+ accuracy.}
+          %\resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Malware Detector} $|$ \emph{Java, Maven, TravisCI, Git}}{Aug 2015 -- May 2016}
+          \resumeItemListStart
+            \resumeItem{Performed binary analsis on PE-executables and applied a n-gram based approach to finalize a binary feature set.}
+            \resumeItem{Applied SVM classification for modelling, which in turn detected all the malicious and benign exe's.}
+            \resumeItem{Designed and developed a GUI using JApplets/JSwing to automate the training, validation and prediction.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{ --- C/C++, Pro*C, Java, Racket, Python, R, \LaTeX{}, WebAssembly, JavaScript, HTML/CSS, SQL} \\
+     %%\textbf{Web Technologies}{:,} \\
+     %%\textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+     \textbf{Developer Tools}{ --- Git, Docker, GitLab CI/CD, VSCode, CMake, GDB, Putty, Eclipse, PL/SQL Developer, R Studio} \\
+     %%\textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     \textbf{Methodologies}{ --- OOPS, UML, SDLC - Incremental Model, Agile Model - SCRUM and Extreme Programming.}
+    }}
  \end{itemize}
-}
 
-
-{\customcventry{Jan 2017 - Aug 2019}{Software Developer}{Tata Consultancy Servies Limited}{Mumbai, India}{}
-{\begin{itemize}
-  \item \textbf{Product/Team:} TCS BANCS Securities Trading - Order Routing System (ORS/OMS) Team
-  \item \textbf{Domain:} Capital Markets - Front Office 
-  \item \textbf{Technologies:} Unix, Pro*C, C/C++, Oracle 11g, PL/SQL PL/SQL Developer, FIX 4.4, GDB, Bash Shell Scripting, Putty.
-  \item Functional knowledge about Capital Markets (Equity, Derivatives, Algorithmic Trading, Currency and Mutual Funds).
-  \item Worked with premier institutional and retail clients: BNP Paribas, Investec, Nomura, HDFC Securities, Axis Securities, etc.
-  \item Developed change requests, refactored code and fixed multiple bugs.
-  \item Performed application analysis of UAT, SIT and Production environments.
-  \item Provided production support (onsite/off-site) to institutional and retail trading desks during critical market hours.
-  \item Had continuous liaison with onsite/off-site teams for understanding and resolving SIT, UAT and Production Issues.
-  \item Successfully made various modules and patches GO-LIVE.
-  \item Engaged with BNPP and Fidessa application testing teams by providing them support.
-  \item Reported, replicated and resolved multiple defects that were encountered.
-  \item Deployed TCS BaNCS Securities Trading (FNO) on UAT/SIT/Production application server's.
-  \item Successfully transitioned the application from SIT to Production (Go Live).
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Awards \& Achievements}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \resumeItemListStart
+       \resumeItem{Research fellowship grant of 22,500 CAD/yr by IBM CAS-Atlantic on the Eclipse OMR project, 2019-2021. } \\
+     %%\textbf{Web Technologies}{:,} \\
+     %%\textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+       \resumeItem{Awarded "Star of the Month" twice for oustanding performance at TCS, Nov 2017 and Jan 2018.} \\
+       \resumeItem{"Star Team Award" award at TCS for assuring a succesful direct connectivity GO-LIVE for all clients, Jun 2019.} \\
+       \resumeItem{Elected as the Secretary of UNB Computer Science Graduate Students Association, Nov 2020 - present.} \\
+       \resumeItemListEnd
+     %%\textbf{Libraries}{: pandas, NumPy, Matplotlib}
+    }}
  \end{itemize}
-}
-%}
-%\begin{flushleft}
-%\textit{Technology Analyst}\hspace{285.0pt}\textbf{Edinburgh, Scotland}
-%\begin{itemize}
-%    \item Built a continuous delivery model for my client’s Development Team.\hspace{30.0pt}\textit{July 2015 – June 2016}\\ The incremental development method reduced three-man days of development time on a 14-day sprint.
-%    \item Created Production like testing environments in AWS Cloud for sprint teams to enhance test-driven development. The new process promoted quality development culture. The number of defects were reduced by one-fifth. The time saved in fixing bugs increased the development time by 15% per week.
-%\end{itemize}
-%\end{flushleft}
-
-%\begin{flushleft}
-%\textit{Systems Engineer}\hspace{315.0pt}\textbf{Bangalore, India}
-%\begin{itemize}
-%    \item Developed a comprehensive shell script that remotely monitored\hspace{45.0pt}\textit{March 2012 – July 2015}\\ the health of all the production services. The script visualized the current state of the different production services in a dashboard. The transparent report dashboard decreased production outage to one two incidents in a financial quarter.
-%    \item Encapsulated the build scripts in a Jenkins automation server. The user-friendly Jenkins GUI empowered the developers to trigger new builds themselves. The DevOps effort saved was 2 man-days every week.
-%\end{itemize}
-%\end{flushleft}
-
-\section{AWARDS AND ACHIEVEMENTS}
-\begin{minipage}{\maincolumnwidth}%
-	\small{
-    	\begin{itemize}
-          \item Research fellowship grant of 22,500/yr CAD with IBM CAS on the Eclipse OMR project, 2019-2021. 
-          \item Awarded "Star of the Month" twice for oustanding performance at TCS, Nov 2017 and Jan 2018.
-		\end{itemize}}%
-\end{minipage}%
-
-\section{EXTRA-CURRICULAR ACTIVITIES}
-\begin{minipage}{\maincolumnwidth}%
-	\small{
-    	\begin{itemize}
-          \item "Ask Me Anthing" Volunteer at 30th Annual International Conference on Computer Science and Software Engineering. 
-          \item Secretary at UNB Computer Science Graduate Student Association (CSGSA), 2019 - present. 
-          \item Attained Sun Java Programming Language (SL-275) Course with 70\% at Aptech Education Center.
-          \item Presented in NEXTECH-2013 National Level Technical Project Exhibition and Competition.
-          \item Participated in workshops and completed several online courses on Udemy, Coursera and DataCamp. 
-		\end{itemize}}%
-\end{minipage}%
 
 
-%----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
-%----------------------------------------------------------------------------------------
 
-\section{INTERESTS}
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Publications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \href{https://dl.acm.org/doi/abs/10.5555/3432601.3432624}{\underline{{An ELF-based storage option for the eclipse OMR ahead-of-time compiler.}}}{ In Proceedings of the 30th Annual International Conference on Computer Science and Software Engineering (CASCON '20). IBM Corp., USA, 173–178.} 
+     }}
+ \end{itemize}
 
-\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
-\cvlistdoubleitem{Garedening}{Numismatics}
-\cvlistdoubleitem{Cooking}{Playing Tennis}
-\cvlistitem{Running}
-
-}
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%%\bibliographystyle{plain}
-%\renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% 
-%\renewcommand{\refname}{PUBLICATIONS \& PRESENTATIONS}
-%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-%-----       letter       ---------------------------------------------------------
-
+%-------------------------------------------
 \end{document}
-
-
-%% end of file `template.tex'.
