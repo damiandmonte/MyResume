@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.31)  28 FEB 2021 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.31)  28 MAR 2021 12:49
 entering extended mode
 **f:/MCS/MyResume/DamianResume.tex
 (f:/MCS/MyResume/DamianResume.tex
@@ -291,7 +291,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 137.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -302,17 +302,17 @@ This may cause the page layout to be inconsistent, however.
 [1
 
 {C:/Users/damia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
  (f:/MCS\MyResume\DamianResume.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `DamianResume.out' has not changed.
-(rerunfilecheck)             Checksum: 75DE06A5F18898F63EB7F8B94BCB3197;298.
+(rerunfilecheck)             Checksum: 4D65AD69DC2DDD7134BBFD6CFF78C29E;298.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
  ) 
 Here is how much of TeX's memory you used:
  6984 strings out of 481212
@@ -321,9 +321,9 @@ Here is how much of TeX's memory you used:
  22447 multiletter control sequences out of 15000+200000
  539657 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,11n,45p,351b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,11n,45p,372b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on f:/MCS\MyResume\DamianResume.pdf (1 page, 155595 bytes).
+Output written on f:/MCS\MyResume\DamianResume.pdf (1 page, 156024 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  8 named destinations out of 1000 (max. 500000)
