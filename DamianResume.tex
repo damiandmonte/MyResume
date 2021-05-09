@@ -43,8 +43,8 @@
 \addtolength{\oddsidemargin}{-0.8in}
 \addtolength{\evensidemargin}{-0.8in}
 \addtolength{\textwidth}{1.5in}
-\addtolength{\topmargin}{-0.8in}
-\addtolength{\textheight}{1.9in}
+\addtolength{\topmargin}{-0.85in}
+\addtolength{\textheight}{1.8in}
 
 \urlstyle{same}
 
@@ -138,9 +138,9 @@
     \resumeSubheading
       {Fr. Concceicao Rodrigues College of Engineering, Univeristy of Mumbai}{Mumbai, MH}
       {Bachelor of Engineering (Computer Engineering) }{Jul. 2013 -- May 2016}
-    \resumeSubheading
-      {Babasaheb Gawde Institute of Technology, MSBTE, AICTE }{Mumbai, MH}
-      {Diploma in Computer Technology}{Jun. 2010 -- May 2013}
+   % \resumeSubheading
+    %  {Babasaheb Gawde Institute of Technology, MSBTE, AICTE }{Mumbai, MH}
+     % {Diploma in Computer Technology}{Jun. 2010 -- May 2013}
   \resumeSubHeadingListEnd
 
 
@@ -152,7 +152,7 @@
      \textbf{Languages}{ --- C/C++, Pro*C, Java, Racket, Python, R, \LaTeX{}, WebAssembly, JavaScript, HTML/CSS, SQL} \\
      %%\textbf{Web Technologies}{:,} \\
      %%\textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{ --- Git, Docker, GitLab CI/CD, VSCode, CMake, GDB, Putty, Eclipse, PL/SQL Developer, R Studio} \\
+     \textbf{Developer Tools}{ --- Git, Docker, GitLab CI/CD, VSCode, CMake, GDB, Valgrind, Perf, Putty, Eclipse, PL/SQL Developer, R Studio} \\
      %%\textbf{Libraries}{: pandas, NumPy, Matplotlib}
      \textbf{Methodologies}{ --- OOPS, UML, SDLC - Incremental Model, Agile Model - SCRUM and Extreme Programming.}
     }}
@@ -166,11 +166,11 @@
     \resumeSubProjheading
       {Graduate Research Assistant }{Sep 2019 -- Present}
       {UNB/IBM Center of Advance Studies --- Atlantic $|$ Project --- \href{https://www-01.ibm.com/ibm/cas/canada/projects?projectId=1036}{\underline{OMR in Resource Constrained Env.}} }{Fredericton, NB}
-      {Technology hands-on --- C++, Gitlab CI/CD, VSCode, Docker, GDB, Linux}
+      {Technology Stack --- C++, Gitlab CI/CD, VSCode, Docker, GDB, Linux}
       \resumeItemListStart
         \resumeItem{Researched into shared cache and ELF-based compiled code storage mechanisms for Eclipse OMR compiler technology}
-        \resumeItem{Co-authored and contributed shared cache code to the open source Eclipse OMR code base.}
-        \resumeItem{Developed a ELF-based shared object generator in C++ for storing WebAssembly Ahead-of-time compiled code.}
+        \resumeItem{Contributed to open source \href{https://github.com/eclipse/omr}{\underline{Eclipse OMR code base.}}}
+        \resumeItem{Developed an ELF-based shared object generator in C++ for storing WebAssembly ahead-of-time compiled code.}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -186,7 +186,7 @@
     \resumeSubProjheading
       {Software Developer}{Jan. 2017 -- Aug. 2019}
       {Tata Consultancy Servies Limited $|$ Project --- TCS BaNCS Securites Trading - Front Office }{Mumbai, MH} 
-      {Technology hands-on --- Pro*C, C++, Putty, SVN, GDB, Linux, Bash Scripting, PL/SQL Dev., SCRUM}
+      {Technology Stack --- Pro*C, C++, Putty, SVN, GDB, Linux, Bash Scripting, PL/SQL Dev., SCRUM}
       \resumeItemListStart
     %%  \resumeItem{\textbf{Project}: TCS BaNCS Securites Trading, \textbf{Team}: Order Routing System (ORS/OMS) - Front Office}
       \resumeItem{Developed enhancements and resolved multiple defects/bugs impacting over a million customers for premier institutional and retail clients: \textbf{BNP Paribas, Investec, Nomura, HSBC, HDFC Securities \& Axis Securities}}
@@ -210,7 +210,14 @@
             \resumeItem{Developed Mark and Sweep garbage collector prototype to perform mark/sweep operations on heap objects}
             \resumeItem{Detected and deleted 99\% of dead objects and displayed CLI statistics post garbage collection}
           \resumeItemListEnd  
-    \resumeProjectHeading
+      \resumeProjectHeading
+          {\textbf{NominalGDP Predictor} $|$ \emph{R, ggplot, Tidyverse, Git}}{June 2020 -- Present}
+          \resumeItemListStart
+            \resumeItem{Assembled a dataset of major economic indicators from multiple online and official sources.}
+            \resumeItem{Performed exploratory data analysis on the dataset and trained it using linear regression and random forest model.}
+            \resumeItem{Predicted the Nominal GDP~(of Canada) for the years 2018, 2019 and 2020 with 95\%+ accuracy.}
+          \resumeItemListEnd
+         \resumeProjectHeading
           {\textbf{DaskDB Cost Based Optimizer} $|$ \emph{Python, Pandas, DaskDB}}{Jan 2020 -- Apr 2020}
           \resumeItemListStart
             \resumeItem{Researched into cost based optimzers and created a prototype for a DaskDB data science system}
