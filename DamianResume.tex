@@ -85,6 +85,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeAch}[2]{
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    {\small#1} & #2 \\
+    \end{tabular*}\vspace{-0pt}
+}
+
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
@@ -122,7 +128,7 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Damian D'monte} \\ \vspace{4pt}
+    \textbf{\Huge \scshape Damian Diago D'monte} \\ \vspace{4pt}
     \small 506-897-2169 $|$ \href{mailto:x@x.com}{\underline{damiandmonte@gmail.com}} $|$ 
     \href{https://linkedin.com/in/ddmonte}{\underline{linkedin.com/in/ddmonte}} $|$
     \href{https://github.com/damiandmonte}{\underline{github.com/damiandmonte}}
@@ -134,10 +140,10 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of New Brunswick}{Fredericton, NB}
-      {Master of Computer Science}{Sep. 2019 -- Aug 2021}
+      {Master of Computer Science, 4.2/4.3 CGPA}{Sep. 2019 -- Aug 2021}
     \resumeSubheading
-      {Fr. Concceicao Rodrigues College of Engineering, Univeristy of Mumbai}{Mumbai, MH}
-      {Bachelor of Engineering (Computer Engineering) }{Jul. 2013 -- May 2016}
+      {Fr. Conceicao Rodrigues College of Engineering, University of Mumbai}{Mumbai, MH}
+      {Bachelor of Engineering (Computer Engineering), 7.98/10 CGPA }{Jul. 2013 -- May 2016}
    % \resumeSubheading
     %  {Babasaheb Gawde Institute of Technology, MSBTE, AICTE }{Mumbai, MH}
      % {Diploma in Computer Technology}{Jun. 2010 -- May 2013}
@@ -166,11 +172,13 @@
     \resumeSubProjheading
       {Graduate Research Assistant }{Sep 2019 -- Present}
       {UNB/IBM Center of Advance Studies --- Atlantic $|$ Project --- \href{https://www-01.ibm.com/ibm/cas/canada/projects?projectId=1036}{\underline{OMR in Resource Constrained Env.}} }{Fredericton, NB}
-      {Technology Stack --- C++, Gitlab CI/CD, VSCode, Docker, GDB, Linux}
+      {Technology Stack --- C++, GitLab CI/CD, VSCode, Docker, GDB, Linux, Perf, Valgrind}
       \resumeItemListStart
-        \resumeItem{Researched into shared cache and ELF-based compiled code storage mechanisms for Eclipse OMR compiler technology}
-        \resumeItem{Contributed to open source \href{https://github.com/eclipse/omr}{\underline{Eclipse OMR code base.}}}
-        \resumeItem{Developed an ELF-based shared object generator in C++ for storing WebAssembly ahead-of-time compiled code.}
+        %%\resumeItem{Researched into shared cache and ELF-based compiled code storage mechanisms for the Eclipse OMR compiler technology.}
+        \resumeItem{Contributed the shared cache C++ code to the \textbf{open-source} \href{https://github.com/eclipse/omr}{\underline{Eclipse OMR code base.}}}
+        \resumeItem{Implemented a generic ELF-based shared object generator, in C++, which stores Eclipse OMR ahead-of-time~(AOT) compiled code.}
+        \resumeItem{Enhanced the WebAssembly compiler~(wabtaot) by presenting a lightweight code storage alternative to store its AOT data.}
+        \resumeItem{Performed analysis on the shared cache and the ELF shared object code containers with metrics like execution like exection speed, memory footprint, I/O utilization, file size, code sharing and concurrency.}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -185,16 +193,16 @@
 
     \resumeSubProjheading
       {Software Developer}{Jan. 2017 -- Aug. 2019}
-      {Tata Consultancy Servies Limited $|$ Project --- TCS BaNCS Securites Trading - Front Office }{Mumbai, MH} 
+      {Tata Consultancy Services Limited $|$ Project --- TCS BaNCS Securities Trading - Front Office }{Mumbai, MH} 
       {Technology Stack --- Pro*C, C++, Putty, SVN, GDB, Linux, Bash Scripting, PL/SQL Dev., SCRUM}
       \resumeItemListStart
     %%  \resumeItem{\textbf{Project}: TCS BaNCS Securites Trading, \textbf{Team}: Order Routing System (ORS/OMS) - Front Office}
-      \resumeItem{Developed enhancements and resolved multiple defects/bugs impacting over a million customers for premier institutional and retail clients: \textbf{BNP Paribas, Investec, Nomura, HSBC, HDFC Securities \& Axis Securities}}
-      \resumeItem{Successfully deployed TCS BaNCS Securities Trading (FNO) on UAT/SIT/Production application server's at BNP Paribas, supported UAT/Fidessa testing, provided immediate fixes, and transitioned the product to LIVE}       
+      \resumeItem{Developed enhancements and resolved multiple defects/bugs impacting over a million customers for premier institutional and retail clients: \textbf{BNP Paribas, Investec, Nomura, HSBC, HDFC Securities \& Axis Securities}.}
+      \resumeItem{Successfully deployed TCS BaNCS Securities Trading (FNO) on UAT/SIT/Production application server's at BNP Paribas, supported UAT/Fidessa testing, delivered immediate fixes, and transitioned the product to LIVE.}       
       %%\resumeItem{Continuous liaison with client teams for understanding, replicating and resolving SIT, UAT and production issues}   
-      \resumeItem{Implemented bash scripts to automate application startup, sanity checks, logs backup, market open and close, etc.}
+      \resumeItem{Implemented bash scripts to automate application startup, sanity checks, backup up data, market open and close activities, etc.}
       \resumeItem{Worked with cross-functional teams to ensure fulfillment of product requirements, evaluated product performance and transitioned patches from development to commercialization.}  
-      \resumeItem{Acted as a customer liaison on technical issues related to product integration and deployment}
+      \resumeItem{Acted as a customer liaison on technical issues related to product integration and deployment.}
       \resumeItem{Provided production support (onsite/off-site) to institutional and retail trading desks during critical market hours.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -204,25 +212,25 @@
 \section{Academic Projects}
     \resumeSubHeadingListStart
     \resumeProjectHeading
-          {\textbf{Mark \& Sweep Garbage Collector} $|$ \emph{C++, Git, Cmake}}{Aug 2019 -- Dec 2019}
+          {\textbf{Mark \& Sweep Garbage Collector} $|$ \emph{C++, Git, CMake}}{Aug 2019 -- Dec 2019}
           \resumeItemListStart
-            \resumeItem{Implemented a heap management system to simulate object allocation via input trace files}
-            \resumeItem{Developed Mark and Sweep garbage collector prototype to perform mark/sweep operations on heap objects}
-            \resumeItem{Detected and deleted 99\% of dead objects and displayed CLI statistics post garbage collection}
+            \resumeItem{Implemented a heap management system to simulate object allocation via inputting trace files.}
+            \resumeItem{Developed Mark and Sweep garbage collector in C++ prototype to perform mark/sweep operations on heap objects.}
+            \resumeItem{Detected and deleted 99\% of dead objects and displayed CLI statistics post garbage collection.}
           \resumeItemListEnd  
       \resumeProjectHeading
           {\textbf{NominalGDP Predictor} $|$ \emph{R, ggplot, Tidyverse, Git}}{June 2020 -- Present}
           \resumeItemListStart
             \resumeItem{Assembled a dataset of major economic indicators from multiple online and official sources.}
-            \resumeItem{Performed exploratory data analysis on the dataset and trained it using linear regression and random forest model.}
+            \resumeItem{Performed exploratory data analysis on the dataset and trained it using linear regression and the random forest model.}
             \resumeItem{Predicted the Nominal GDP~(of Canada) for the years 2018, 2019 and 2020 with 95\%+ accuracy.}
           \resumeItemListEnd
          \resumeProjectHeading
           {\textbf{DaskDB Cost Based Optimizer} $|$ \emph{Python, Pandas, DaskDB}}{Jan 2020 -- Apr 2020}
           \resumeItemListStart
-            \resumeItem{Researched into cost based optimzers and created a prototype for a DaskDB data science system}
-            \resumeItem{Developed a statsGather utility using Python and Pandas to gather different types of database statistics}
-            \resumeItem{Implemented the functionality to generate physical plans from a logical plan and calculated the cost of each plan.}
+            \resumeItem{Researched into cost based optimzers and created a prototype for the DaskDB data science system.}
+            \resumeItem{Developed a statsGather utility using Python and Pandas to gather different types of database statistics.}
+            \resumeItem{Implemented the functionality to generate physical plans from a logical plan, and calculated the cost of each plan.}
             %\resumeItem{Performed evaluation using the TPC-H benchmark.}
           \resumeItemListEnd
     %  \resumeProjectHeading
@@ -235,8 +243,8 @@
       \resumeProjectHeading
           {\textbf{Malware Detector} $|$ \emph{Java, JSwing, Git}}{Aug 2015 -- May 2016}
           \resumeItemListStart
-            \resumeItem{Performed binary analysis on PE-executables and applied a n-gram based approach to finalize a binary feature set.}
-            \resumeItem{Applied SVM classification for modelling, which in turn detected all the malicious and benign exe's.}
+            \resumeItem{Performed binary analysis on PE-executables and applied an n-gram based approach to finalize a binary feature set.}
+            \resumeItem{Applied SVM classification for modelling, which classified the executables as either malicious or benign.}
             \resumeItem{Designed and developed a GUI using JApplets/JSwing to automate the training, validation and prediction.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
@@ -244,20 +252,23 @@
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Awards \& Achievements}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-      \resumeItemListStart
-       \resumeItem{Research fellowship grant of 22,500 CAD/yr by IBM CAS-Atlantic on the Eclipse OMR project, 2019-2021. } \\
-     %%\textbf{Web Technologies}{:,} \\
-     %%\textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-       \resumeItem{Awarded "Star of the Month" twice for oustanding performance at TCS, Nov 2017 and Jan 2018.} \\
-       \resumeItem{"Star Team Award" award at TCS for assuring a succesful direct connectivity GO-LIVE for all clients, Jun 2019.} \\
-       \resumeItem{Elected as the Secretary of UNB Computer Science Graduate Students Association, Nov 2020 - present.} \\
-       \resumeItemListEnd
-     %%\textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
-
+  \resumeAch
+    {Research fellowship grant of 23,000 CAD/yr by IBM CAS-Atlantic on the Eclipse OMR project.}{Sep 2019 -- Aug 2021}
+  \resumeAch
+    {Recipient of awards like, ``Star of the Month'' and ``Star Team Award'', for remarkable performance at TCS.}{ Nov 2017 \& Jan 2018}
+  \resumeAch
+    {Elected as the Secretary of UNB Computer Science Graduate Students Association.}{Nov 2020 -- Present}
+%
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%    \small{\item{
+%%      \resumeItemListStart
+%       \resumeItem{Research fellowship grant of 23,000 CAD/yr by IBM CAS-Atlantic on the Eclipse OMR project, 2019-2021. } \\
+%       \resumeItem{Awarded "Star of the Month" twice for oustanding performance at TCS, Nov 2017 and Jan 2018.} \\
+%       \resumeItem{"Star Team Award" award at TCS for assuring a succesful direct connectivity GO-LIVE for all clients, Jun 2019.} \\
+%       \resumeItem{Elected as the Secretary of UNB Computer Science Graduate Students Association, Nov 2020 - present.} \\
+%       \resumeItemListEnd
+%    }}
+% \end{itemize}
 
 
 %

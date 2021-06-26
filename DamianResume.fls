@@ -1,7 +1,7 @@
-PWD f:\MCS\MyResume
+PWD e:\MCS\MyResume
 INPUT C:\Users\damia\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT f:\MCS\MyResume\DamianResume.tex
-OUTPUT f:\MCS\MyResume\DamianResume.log
+INPUT e:\MCS\MyResume\DamianResume.tex
+OUTPUT e:\MCS\MyResume\DamianResume.log
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo
@@ -92,9 +92,9 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pdftex\glyphtounicode.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pdftex\glyphtounicode.tex
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT f:\MCS\MyResume\DamianResume.aux
-INPUT f:\MCS\MyResume\DamianResume.aux
-OUTPUT f:\MCS\MyResume\DamianResume.aux
+INPUT e:\MCS\MyResume\DamianResume.aux
+INPUT e:\MCS\MyResume\DamianResume.aux
+OUTPUT e:\MCS\MyResume\DamianResume.aux
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
@@ -103,14 +103,14 @@ INPUT C:\Users\damia\AppData\Roaming\MiKTeX\2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Users\damia\AppData\Roaming\MiKTeX\2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Users\damia\AppData\Roaming\MiKTeX\2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\damia\AppData\Roaming\MiKTeX\2.9\tex\generic\gettitlestring\gettitlestring.sty
-INPUT f:\MCS\MyResume\DamianResume.out
-INPUT f:\MCS\MyResume\DamianResume.out
-INPUT f:\MCS\MyResume\DamianResume.out
-INPUT f:\MCS\MyResume\DamianResume.out
-OUTPUT f:\MCS\MyResume\DamianResume.pdf
-INPUT f:\MCS\MyResume\DamianResume.out
-INPUT f:\MCS\MyResume\DamianResume.out
-OUTPUT f:\MCS\MyResume\DamianResume.out
+INPUT e:\MCS\MyResume\DamianResume.out
+INPUT e:\MCS\MyResume\DamianResume.out
+INPUT e:\MCS\MyResume\DamianResume.out
+INPUT e:\MCS\MyResume\DamianResume.out
+OUTPUT e:\MCS\MyResume\DamianResume.pdf
+INPUT e:\MCS\MyResume\DamianResume.out
+INPUT e:\MCS\MyResume\DamianResume.out
+OUTPUT e:\MCS\MyResume\DamianResume.out
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
@@ -132,9 +132,9 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti9.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx9.tfm
 INPUT C:\Users\damia\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT f:\MCS\MyResume\DamianResume.aux
-INPUT f:\MCS\MyResume\DamianResume.out
-INPUT f:\MCS\MyResume\DamianResume.out
+INPUT e:\MCS\MyResume\DamianResume.aux
+INPUT e:\MCS\MyResume\DamianResume.out
+INPUT e:\MCS\MyResume\DamianResume.out
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
